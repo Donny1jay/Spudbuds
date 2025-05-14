@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Spudbuds Food Truck - Servant des pommes de terre garnies délicieuses sur roues avec des pommes de terre fraîches et croustillantes et des garnitures uniques." />
+  <title>Camion de Nourriture Spudbuds</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+  <!-- Feuille de style externe -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Chewy', cursive;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .section-title {
+      font-size: 2em;
+      margin: 2em 0;
+      text-align: center;
+    }
+
+    .hover-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .hover-link:hover {
+      color: #ffcc70;
+      text-decoration: underline;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      padding: 2em;
+    }
+
+    .menu-item {
+      text-align: center;
+    }
+
+    .menu-item img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 2em;
+      background: #f8f9fa;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #ffcc70;
+    }
+
+    /* Styles du menu déroulant */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.8em;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      min-width: 120px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 0.5em 0;
+      z-index: 100;
+    }
+
+    .dropdown-menu li {
+      padding: 0.5em 1em;
+    }
+
+    .dropdown-menu li a {
+      color: black;
+      display: block;
+    }
+
+    .dropdown-menu li a:hover {
+      background: #ffcc70;
+      color: #000;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .socials a {
+      margin: 0 1em;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ffcc70;
+      color: #000;
+      padding: 0.7em 2em;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e0a800;
+    }
+
+    .hero {
+      background-color: #fffbe6;
+      text-align: center;
+      padding: 3em;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <header>
+    <div class="logo">
+      <a href="#"><img src="logo.png" alt="Logo Spudbuds" width="100"></a>
+    </div>
+    <nav role="navigation" aria-label="Navigation principale du site">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" aria-label="Basculer le menu de navigation">☰</label>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          <a href="#">Langue</a>
+          <ul class="dropdown-menu">
+            <li><a href="irish.html">Irlandais</a></li>
+            <li><a href="index.html">Anglais</a></li>
+            <li><a href="russian.html">Russe</a></li>
+            <li><a href="ARABI.html">Arabe</a></li>
+            <li><a href="fr.html">Français</a></li>
+            <li><a href="germn.html">Allemand</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Bienvenue chez Spudbuds !</h1>
+        <p>Des pommes de terre garnies délicieuses sur roues. Fraîches, croustillantes, et faites sur commande.</p>
+        <a href="#menu" class="btn">Voir notre menu</a>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2 class="section-title">Nos favoris</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="nakedspud.jpg" alt="Spud nature">
+          <div class="info">
+            <h4>Spud nature</h4>
+            <p>beurre, légèrement salé.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po1.png" alt="Spud garni">
+          <div class="info">
+            <h4>Spud garni</h4>
+            <p>Garniture au fromage, bacon et oignons verts.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="bake.jpg" alt="Spud britannique">
+          <div class="info">
+            <h4>Spud britannique</h4>
+            <p>Garniture au fromage et haricots cuits Heinz.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po2.png" alt="Tater Tots">
+          <div class="info">
+            <h4>Tater Tots</h4>
+            <p>Petites pommes de terre dorées servies avec une sauce maison.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="chilly.jpg" alt="Spud chili">
+          <div class="info">
+            <h4>Spud chili</h4>
+            <p>Garnie de chili con carne savoureux, fromage fondu, crème aigre et oignons verts.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="pimp.jpg" alt="Spud à personnaliser">
+          <div class="info">
+            <h4>Spud à personnaliser</h4>
+            <p>Construisez votre spud parfait ! Choisissez trois légumes et deux viandes.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po3.png" alt="Frites de patates douces">
+          <div class="info">
+            <h4>Frites de patates douces</h4>
+            <p>Sucrées et salées, servies avec une sauce à l'ail.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">À propos de Spudbuds</h2>
+      <p>Né d'une passion pour tout ce qui touche à la pomme de terre, Spudbuds apporte des créations gastronomiques à base de pommes de terre directement à votre quartier. Notre food truck familial parcourt la ville, servant des pommes de terre chaudes et fraîches avec des garnitures et des sauces uniques.</p>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">
+        <a href="https://maps.app.goo.gl/zgREUmgq614ytVPS8" target="_blank" class="hover-link">Trouvez-nous</a>
+      </h2>
+      <p>Consultez notre <a href="schedule.html" class="hover-link">programme de camion</a> pour voir où nous serons ensuite !</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2731.988804326178!2d31.271104074352543!3d29.96164862249096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2seg!4v1746395662943!5m2!1sen!2seg"
+          width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Spudbuds Food Truck. Tous droits réservés.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/spudbuds_egy/" target="_blank">Instagram</a> |
+      <a href="#" target="_blank">Facebook</a> |
+      <a href="https://x.com/SpudBuds_egy" target="_blank">Twitter</a>
+    </div>
+  </footer>
+</body>
+</html>

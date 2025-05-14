@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SpudBuds Food Truck - вкуснейшая картошка, запеченная в разных вариантах, с уникальными специями." />
+  <title>SpudBuds Food Truck</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Chewy', cursive;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .section-title {
+      font-size: 2em;
+      margin: 2em 0;
+      text-align: center;
+    }
+
+    .hover-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .hover-link:hover {
+      color: #ffcc70;
+      text-decoration: underline;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      padding: 2em;
+    }
+
+    .menu-item {
+      text-align: center;
+    }
+
+    .menu-item img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 2em;
+      background: #f8f9fa;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #ffcc70;
+    }
+
+    /* Dropdown styles */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.8em;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      min-width: 120px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 0.5em 0;
+      z-index: 100;
+    }
+
+    .dropdown-menu li {
+      padding: 0.5em 1em;
+    }
+
+    .dropdown-menu li a {
+      color: black;
+      display: block;
+    }
+
+    .dropdown-menu li a:hover {
+      background: #ffcc70;
+      color: #000;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .socials a {
+      margin: 0 1em;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ffcc70;
+      color: #000;
+      padding: 0.7em 2em;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e0a800;
+    }
+
+    .hero {
+      background-color: #fffbe6;
+      text-align: center;
+      padding: 3em;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <header>
+    <div class="logo">
+      <a href="#"><img src="logo.png" alt="SpudBuds Logo" width="100"></a>
+    </div>
+    <nav role="navigation" aria-label="Основная навигация">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" aria-label="Переключить меню">☰</label>
+      <ul>
+        <li><a href="#menu">Меню</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#contact">Контакты</a></li>
+        <li class="dropdown">
+          <a href="#">Язык</a>
+          <ul class="dropdown-menu">
+            <li><a href="irish.html">Ирландский</a></li>
+            <li><a href="index.html">Английский</a></li>
+            <li><a href="ARABI.html">Арабский</a></li>
+            <li><a href="russian.html">Русский</a></li>
+            <li><a href="fr.html">Французский</a></li>
+            <li><a href="germn.html">Немецкий</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Добро пожаловать в SpudBuds!</h1>
+        <p>Вкуснейшая картошка с начинками на колесах. Свежая, хрустящая и приготовленная по вашему заказу.</p>
+        <a href="#menu" class="btn">Посмотреть меню</a>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2 class="section-title">Наши фавориты</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="nakedspud.jpg" alt="Простая картошка">
+          <div class="info">
+            <h4>Простая картошка</h4>
+            <p>Масло, лёгкая соль.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po1.png" alt="Начиненная картошка">
+          <div class="info">
+            <h4>Начиненная картошка</h4>
+            <p>С сыром, беконом и зелёным луком.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="bake.jpg" alt="Британская картошка">
+          <div class="info">
+            <h4>Британская картошка</h4>
+            <p>С сыром и запечённой фасолью Heinz.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po2.png" alt="Тейтерс Тотс">
+          <div class="info">
+            <h4>Тейтерс Тотс</h4>
+            <p>Золотые картофельные дольки, подающиеся с домашним соусом для маканья.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="chilly.jpg" alt="Острая картошка">
+          <div class="info">
+            <h4>Острая картошка</h4>
+            <p>С соусом из мяса чили, растопленным сыром, сметаной и зелёным луком.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="pimp.jpg" alt="Прокачай свою картошку">
+          <div class="info">
+            <h4>Прокачай свою картошку</h4>
+            <p>Создайте свою идеальную картошку! Выберите 3 овоща и 2 мяса.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po3.png" alt="Жареная сладкая картошка">
+          <div class="info">
+            <h4>Жареная сладкая картошка</h4>
+            <p>Сладкая и вкусная, подающаяся с чесночным соусом.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">О SpudBuds</h2>
+      <p>SpudBuds основана на любви ко всему, что связано с картошкой. Наш фуд-трак предлагает вам горячую, свежую и хрустящую картошку с уникальными начинками и соусами, прямо из нашего фуд-трака.</p>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">
+        <a href="https://maps.app.goo.gl/zgREUmgq614ytVPS8" target="_blank" class="hover-link">Найдите нас</a>
+      </h2>
+      <p>Проверьте <a href="schedule.html" class="hover-link">график нашего фуд-трака</a>, чтобы увидеть, где мы будем в следующий раз!</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2731.988804326178!2d31.271104074352543!3d29.96164862249096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2seg!4v1746395662943!5m2!1sen!2seg"
+          width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SpudBuds Food Truck. Все права защищены.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/spudbuds_egy/" target="_blank">Instagram</a> |
+      <a href="#" target="_blank">Facebook</a> |
+      <a href="https://x.com/SpudBuds_egy" target="_blank">Twitter</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="شاحنة طعام سبودبودز - تقدم بطاطا محشوة لذيذة على عجلات مع بطاطا طازجة ومقرمشة وتوابل فريدة." />
+  <title>شاحنة طعام سبودبودز</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Chewy', cursive;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .section-title {
+      font-size: 2em;
+      margin: 2em 0;
+      text-align: center;
+    }
+
+    .hover-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .hover-link:hover {
+      color: #ffcc70;
+      text-decoration: underline;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      padding: 2em;
+    }
+
+    .menu-item {
+      text-align: center;
+    }
+
+    .menu-item img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 2em;
+      background: #f8f9fa;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #ffcc70;
+    }
+
+    /* Dropdown styles */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.8em;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      min-width: 120px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 0.5em 0;
+      z-index: 100;
+    }
+
+    .dropdown-menu li {
+      padding: 0.5em 1em;
+    }
+
+    .dropdown-menu li a {
+      color: black;
+      display: block;
+    }
+
+    .dropdown-menu li a:hover {
+      background: #ffcc70;
+      color: #000;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .socials a {
+      margin: 0 1em;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ffcc70;
+      color: #000;
+      padding: 0.7em 2em;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e0a800;
+    }
+
+    .hero {
+      background-color: #fffbe6;
+      text-align: center;
+      padding: 3em;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+
+  <header>
+    <div class="logo">
+      <a href="#"><img src="logo.png" alt="شعار سبودبودز" width="100"></a>
+    </div>
+    <nav role="navigation" aria-label="التنقل الرئيسي للموقع">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" aria-label="تبديل قائمة التنقل">☰</label>
+      <ul>
+        <li><a href="#menu">القائمة</a></li>
+        <li><a href="#about">معلومات عنا</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+        <li class="dropdown">
+          <a href="#">اللغة</a>
+          <ul class="dropdown-menu">
+            <li><a href="irish.html">الأيرلندية</a></li>
+            <li><a href="index.html">الإنجليزية</a></li>
+            <li><a href="russian.html">الروسية</a></li>
+            <li><a href="ARABI.html">العربية</a></li>
+            <li><a href="fr.html">الفرنسية</a></li>
+            <li><a href="germn.html">الألمانية</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>مرحبًا بكم في سبودبودز!</h1>
+        <p>بطاطا محشوة لذيذة على عجلات. طازجة، مقرمشة، ومعدّة حسب الطلب.</p>
+        <a href="#menu" class="btn">شاهد قائمتنا</a>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2 class="section-title">مفضلاتنا</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="nakedspud.jpg" alt="سبود عادي">
+          <div class="info">
+            <h4>سبود عادي</h4>
+            <p>زبدة، ملح خفيف.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po1.png" alt="سبود محشو">
+          <div class="info">
+            <h4>سبود محشو</h4>
+            <p>مغطى بالجبن، البيكون، والبصل الأخضر.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="bake.jpg" alt="سبود بريطاني">
+          <div class="info">
+            <h4>سبود بريطاني</h4>
+            <p>مغطى بالجبن، وفاصوليا مخبوزة من هاينز.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po2.png" alt="تاتير توتس">
+          <div class="info">
+            <h4>تاتير توتس</h4>
+            <p>توابل ذهبية تقدم مع صوص غمس منزلي.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="chilly.jpg" alt="سبود حار">
+          <div class="info">
+            <h4>سبود حار</h4>
+            <p>مغطى بصلصة شيلي لحم، جبن مذاب، كريمة حامضة، وبصل أخضر.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="pimp.jpg" alt="زيني سبودك">
+          <div class="info">
+            <h4>زيني سبودك</h4>
+            <p>ابني سبودك المثالي! اختر من ثلاثة خضروات واثنين من اللحوم.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po3.png" alt="بطاطا حلوة مقلية">
+          <div class="info">
+            <h4>بطاطا حلوة مقلية</h4>
+            <p>حلوة ولذيذة، تقدم مع صوص الثوم.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">عن سبودبودز</h2>
+      <p>مبنية على حب كل ما يتعلق بالبطاطا، تقدم سبودبودز إبداعات البطاطا الفاخرة مباشرة إلى حيّك. شاحنة الطعام العائلية الخاصة بنا تجوب المدينة، تقدم بطاطا ساخنة وطازجة مع توابل وصوصات فريدة.</p>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">
+        <a href="https://maps.app.goo.gl/zgREUmgq614ytVPS8" target="_blank" class="hover-link">اكتشف مكاننا</a>
+      </h2>
+      <p>تحقق من <a href="schedule.html" class="hover-link">جدول شاحنتنا</a> لترى أين ستكون في المرة القادمة!</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2731.988804326178!2d31.271104074352543!3d29.96164862249096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2seg!4v1746395662943!5m2!1sen!2seg"
+          width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 شاحنة طعام سبودبودز. جميع الحقوق محفوظة.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/spudbuds_egy/" target="_blank">إنستغرام</a> |
+      <a href="#" target="_blank">فيسبوك</a> |
+      <a href="https://x.com/SpudBuds_egy" target="_blank">تويتر</a>
+    </div>
+  </footer>
+</body>
+</html>

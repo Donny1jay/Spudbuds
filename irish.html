@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ga">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SpudBuds Food Truck - Prátaí blasta, lánaithe ar gach taobh agus le éagsúlachtaí ar fáil." />
+  <title>SpudBuds Food Truck</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Chewy', cursive;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .section-title {
+      font-size: 2em;
+      margin: 2em 0;
+      text-align: center;
+    }
+
+    .hover-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .hover-link:hover {
+      color: #ffcc70;
+      text-decoration: underline;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      padding: 2em;
+    }
+
+    .menu-item {
+      text-align: center;
+    }
+
+    .menu-item img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 2em;
+      background: #f8f9fa;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #ffcc70;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a::after {
+      content: " ▼";
+      font-size: 0.8em;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      min-width: 120px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 0.5em 0;
+      z-index: 100;
+    }
+
+    .dropdown-menu li {
+      padding: 0.5em 1em;
+    }
+
+    .dropdown-menu li a {
+      color: black;
+      display: block;
+    }
+
+    .dropdown-menu li a:hover {
+      background: #ffcc70;
+      color: #000;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .socials a {
+      margin: 0 1em;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ffcc70;
+      color: #000;
+      padding: 0.7em 2em;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e0a800;
+    }
+
+    /* Hero Section with Flag Background */
+    .hero {
+      background-image: url('irsh.jfif');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 3em;
+      color: white;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Téigh go dtí an Ábhar Príomhúil</a>
+
+  <header>
+    <div class="logo">
+      <a href="#"><img src="logo.png" alt="SpudBuds Logo" width="100"></a>
+    </div>
+    <nav role="navigation" aria-label="Príomhchinnteoireacht">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" aria-label="Cuir isteach roghchlár">☰</label>
+      <ul>
+        <li><a href="#menu">Biachlár</a></li>
+        <li><a href="#about">Fúinn</a></li>
+        <li><a href="#contact">Teagmháil</a></li>
+        <li class="dropdown">
+          <a href="#">Teanga</a>
+          <ul class="dropdown-menu">
+            <li><a href="irish.html">Gaeilge</a></li>
+            <li><a href="index.html">Béarla</a></li>
+            <li><a href="ARABI.html">Araibis</a></li>
+            <li><a href="russian.html">Rúisis</a></li>
+            <li><a href="fr.html">Fraincis</a></li>
+            <li><a href="germn.html">Gearmáinis</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Fáilte chuig SpudBuds!</h1>
+        <p>Prátaí blasta lánaithe ar rothar. Úr, criostúil, agus déanta le hoiriúnú do gach duine.</p>
+        <a href="#menu" class="btn">Féach ar ár mBiachlár</a>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2 class="section-title">Ár n-Usáidí is Taitneamhaí</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="nakedspud.jpg" alt="Práta Simplí">
+          <div class="info">
+            <h4>Práta Simplí</h4>
+            <p>Im agus séasúráil éadrom.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po1.png" alt="Práta Líonta">
+          <div class="info">
+            <h4>Práta Líonta</h4>
+            <p>Le cáis, bagún agus oinniún glas.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="bake.jpg" alt="Práta na Breataine">
+          <div class="info">
+            <h4>Práta na Breataine</h4>
+            <p>Le cáis agus pónairí Heinz bácáilte.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po2.png" alt="Tater Tots">
+          <div class="info">
+            <h4>Tater Tots</h4>
+            <p>Friochta prátaí le dip féin-dhéanta.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="chilly.jpg" alt="Prátaí Spíosraithe">
+          <div class="info">
+            <h4>Prátaí Spíosraithe</h4>
+            <p>Le anlann feola chili, cáis leáite, cream géar agus oinniún glas.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="pimp.jpg" alt="Pimp Your Spud">
+          <div class="info">
+            <h4>Pimp Your Spud</h4>
+            <p>Cruthaigh do phróta foirfe féin! Roghnaigh 3 glasraí agus 2 cineál feola.</p>
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="po3.png" alt="Práta Súcra Friochta">
+          <div class="info">
+            <h4>Práta Súcra Friochta</h4>
+            <p>Le anlann gairleoige.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">Fúinn</h2>
+      <p>Is aoibhinn linn an prósna prátaí. Cuirimid prátaí te agus úr isteach sa mhórbhialann le roghanna éagsúla agus anlainn uathúla, díreach ónár gcarr bia.</p>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">
+        <a href="https://maps.app.goo.gl/zgREUmgq614ytVPS8" class="hover-link" target="_blank">Faigh sinn</a>
+      </h2>
+      <p>Seiceáil an <a href="schedule.html" class="hover-link">Scéidil</a> chun a fháil amach cathain atáimid i do cheantar!</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2731.988804326178!2d31.271104074352543!3d29.96164862249096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2seg!4v1746395662943!5m2!1sen!2seg"
+          width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SpudBuds Food Truck. Gach ceart ar cosaint.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/spudbuds_egy/" target="_blank">Instagram</a> |
+      <a href="#" target="_blank">Facebook</a> |
+      <a href="https://x.com/SpudBuds_egy" target="_blank">Twitter</a>
+    </div>
+  </footer>
+</body>
+</html>
